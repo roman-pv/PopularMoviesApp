@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Popular Movies App</string>
+    <string name="details_activity_name">Movie Details</string>
+
+    <!-- strings for movie details activity -->
+    <string name="vote_average_title">User rating:</string>
+    <string name="release_date_title">Release date:</string>
+    <string name="reviews_title">Reviews</string>
+
+    <!-- menu items -->
+    <string name="menu_movies">Select a category</string>
+    <string name="menu_show_popular">Popular movies</string>
+    <string name="menu_show_top_rated">Top-rated movies</string>
+    <string name="menu_show_favorites">Favorites</string>
+
+    <string name="pref_switch_categories">Switch categories</string>
+    <string name="pref_switch_categories_key" translatable="false">movie_category</string>
+    <string name="pref_category_popular" translatable="false">popular</string>
+    <string name="pref_category_top_rated" translatable="false">top_rated</string>
+    <string name="pref_category_favorites" translatable="false">favorites</string>
+
+    <!-- Toast messages showed when a movie is added to or removed from the favorites -->
+    <string name="added_to_favorites_toast">"%s is added to favorites."</string>
+    <string name="removed_from_favorites_toast">"%s is removed from favorites."</string>
+
+    <!-- Shared element name -->
+    <string name="poster">poster</string>
+</resources>

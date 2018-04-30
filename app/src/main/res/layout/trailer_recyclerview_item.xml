@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/trailer_image_view"
+        android:layout_width="240dp"
+        android:layout_height="135dp"
+        android:layout_margin="8dp"
+        android:adjustViewBounds="true"
+        android:foreground="@drawable/ic_play_circle_outline_black_24dp"
+        android:foregroundGravity="center"
+        android:scaleType="centerCrop"/>
+
+</layout>

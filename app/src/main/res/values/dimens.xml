@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_medium">14dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="toolbar_elevations">4dp</dimen>
+
+
+
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="movies_categories">
+        <item>@string/menu_show_popular</item>
+        <item>@string/menu_show_top_rated</item>
+        <item>@string/menu_show_favorites</item>
+    </string-array>
+
+</resources>

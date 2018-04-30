@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryLight">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/detail_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context="com.example.roman.popularmoviesapp.ui.detail.DetailActivity">
+
+            <Toolbar
+                android:id="@+id/toolbar_detail"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:elevation="@dimen/toolbar_elevations"
+                app:autoSizeTextType="uniform">
+
+                <ImageView
+                    android:id="@+id/star_button_image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/padding_medium"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_star_black_24dp" />
+            </Toolbar>
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="0dp"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingStart="@dimen/padding_medium"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/release_date_tv"
+                app:layout_constraintTop_toBottomOf="@id/toolbar_detail"
+                tools:text="Interstellar blablabla" />
+
+            <ImageView
+                android:id="@+id/detail_poster"
+                android:transitionName="@string/poster"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/padding_medium"
+                android:layout_marginEnd="@dimen/padding_medium"
+                android:layout_marginStart="@dimen/padding_medium"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="4:6"
+                app:layout_constraintEnd_toEndOf="@+id/vertical_guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_tv"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.27"
+                tools:src="@drawable/test_poster" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/vertical_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35" />
+
+
+            <TextView
+                android:id="@+id/release_date_tv"
+                style="@style/DetailScreenItem"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingStart="@dimen/padding_medium"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toEndOf="@id/detail_poster"
+                app:layout_constraintTop_toTopOf="@+id/detail_poster"
+                tools:text="2018" />
+
+            <TextView
+                android:id="@+id/vote_average_title_tv"
+                style="@style/DetailScreenItem"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_large"
+                android:text="@string/vote_average_title"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toEndOf="@id/detail_poster"
+                app:layout_constraintTop_toBottomOf="@+id/release_date_tv" />
+
+            <TextView
+                android:id="@+id/vote_average_tv"
+                style="@style/DetailScreenItem"
+                android:layout_marginStart="@dimen/padding_medium"
+                android:background="@drawable/rating_circle"
+                android:gravity="center"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                app:layout_constraintStart_toEndOf="@id/detail_poster"
+                app:layout_constraintTop_toBottomOf="@+id/vote_average_title_tv"
+                tools:text="6.8" />
+
+            <TextView
+                android:id="@+id/overview_tv"
+                style="@style/DetailScreenItem"
+                android:layout_width="0dp"
+                android:paddingBottom="@dimen/padding_medium"
+                android:paddingEnd="@dimen/padding_medium"
+                android:paddingStart="@dimen/padding_medium"
+                android:paddingTop="@dimen/padding_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/detail_poster"
+                app:layout_constraintTop_toBottomOf="@+id/vote_average_tv"
+                app:layout_constraintWidth_default="wrap"
+                tools:text="Despite his family’s baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history." />
+
+            <android.support.constraint.Barrier
+                android:id="@+id/overview_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="overview_tv, detail_poster" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_trailers"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/padding_medium"
+                android:background="@color/colorPrimaryDark"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@+id/overview_barrier" />
+
+            <TextView
+                android:id="@+id/reviews_title_tv"
+                style="@style/DetailScreenItem"
+                android:layout_gravity="center"
+                android:text="@string/reviews_title"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerview_trailers" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_reviews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reviews_title_tv" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</layout>

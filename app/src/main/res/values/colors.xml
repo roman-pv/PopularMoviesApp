@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#607d8b</color>
+    <color name="colorPrimaryDark">#34515e</color>
+    <color name="colorPrimaryLight">#8eacbb</color>
+    <color name="colorAccent">#e57373</color>
+    <color name="colorYellow">#FFF59D</color>
+
+    <color name="colorGreyLight">#B5C8D1</color>
+
+
+
+    <!-- Rating circle color for an movie with rating between 9 and 10 -->
+    <color name="magnitude9plus">#593cdb1c</color>
+
+    <!-- Rating circle color for an movie with rating between 8 and 9 -->
+    <color name="magnitude8">#597bdb37</color>
+
+    <!-- Rating circle color for an movie with rating between 7 and 8 -->
+    <color name="magnitude7">#598adb26</color>
+
+    <!-- Rating circle color for an movie with rating between 6 and 7 -->
+    <color name="magnitude6">#59c4ef4d</color>
+
+    <!-- Rating circle color for an movie with rating between 5 and 6 -->
+    <color name="magnitude5">#59efdb3a</color>
+
+    <!-- Rating circle color for an movie with rating between 4 and 5 -->
+    <color name="magnitude4">#59F5A623</color>
+
+    <!-- Rating circle color for an movie with rating between 3 and 4 -->
+    <color name="magnitude3">#59FF7D50</color>
+
+    <!-- Rating circle color for an movie with rating between 2 and 3 -->
+    <color name="magnitude2">#59E75F40</color>
+
+    <!-- Rating circle color for an movie with rating between 1 and 2 -->
+    <color name="magnitude1">#59D93218</color>
+
+    <!-- Rating circle color for an movie with rating between 0 and 1 -->
+    <color name="magnitude0">#59C03823</color>
+</resources>
