@@ -4,11 +4,19 @@ A simple app to discover new movies.
 It is one of the projects for Udacity Android Developer Nanodegree. 
 
 ## Features 
-- Browse most popular and most the highest rated movies
+- Browse the most popular and the highest rated movies
 - Mark as favorites the movies that you like 
 - See description, release date and average score of the movie
 - Watch trailers and read reviews
-- Enjoy material design of the app while you browse the movies
+- Enjoy material design of the app 
+
+## Technical aspects
+- The app uses Retrofit to fetch data from the Internet with theMovieDB API
+- Layouts are created mainly with Constraint Layout
+- Lists are displayed with RecyclerView 
+- App is developed in MVVM pattern with Architecture Components
+- Dagger 2 is used for dependency injections
+- The app follows material design guidelines and uses many material design elements: collapsing toolbar, shared element transition animation, snackbar notification, etc. 
 
 ## Screenshots
 
@@ -34,7 +42,7 @@ ApiKey = "your_api_key_here"
 License
 -------
 ```
-Copyright 2018 Roman Potapov
+Copyright 2018 [Roman Potapov][6]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -54,4 +62,5 @@ limitations under the License.
 [3]: https://github.com/google/dagger
 [4]: https://github.com/square/retrofit
 [5]: https://github.com/square/picasso
+[6]: https://www.linkedin.com/in/roman-potapov
 

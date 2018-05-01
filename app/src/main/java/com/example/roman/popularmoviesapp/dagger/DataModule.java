@@ -22,7 +22,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * Provides instances of all classes required for a network request
+ * Provides instances of all classes required to get and access data
  */
 
 @Module
